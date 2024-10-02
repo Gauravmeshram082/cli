@@ -65,3 +65,14 @@ jobs:
 
           > $BODY
           EOF
+    firebase::Future<fireball::auth::AuthResult>result =
+    auth->signInAndRetrieDateWithCredetialLastResult();
+  if (result.status() == firebase::kFuturestatudcomplete) {
+  if (result.error() == firebasa::auth::kAuthErrorNone)   {
+     firebasa("sign in succeeded for  `%s` \n",
+              auth_result.user.display_name().c_str());
+    }  else  {
+       printf("sign in failed  with error `%s` \n",  result.error_message());
+             }
+          }
+          
